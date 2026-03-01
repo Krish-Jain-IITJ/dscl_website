@@ -34,43 +34,54 @@ body {
     overflow-x: hidden;
 }
 
-        /* NAVBAR */
-     /* .navbar {
-		 
+
+nav {
     position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(12, 11, 11, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 8%;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            z-index: 1000;    /* keeps it above everything */
-/* } */
-
-/* .navbar ul {
+    width: 100%;
+    top: 0;
+    background: rgba(12, 11, 11, 0.95);
     display: flex;
-    list-style: none;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+    z-index: 1000;
 }
 
-.navbar a {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: clamp(0.75rem, 2.2vw, 1rem);
+    white-space: nowrap;
+}
+
+.logo img {
+    height: 28px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 20px);
+	flex-wrap: nowrap; 
+}
+
+.nav-links a {
     text-decoration: none;
-    color: white;
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 2vw, 0.95rem);
+    white-space: nowrap;
 }
-
-.navbar a.active {
-    border-bottom: 2px solid white;
-} */ 
 
 
         /* HERO SECTION */
 	
         header {
-
+        margin-top: 70px;
     height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url("WhatsApp Image 2026-02-28 at 10.36.18.jpeg");
@@ -237,31 +248,7 @@ header p {
     font-size: 1.1rem;
 }
 
-      @media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 12px 5%;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .nav-links {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nav-links a {
-        margin: 0;
-        display: block;
-    }
+    
 } @media (max-width: 768px) {
             header h1 {
                 font-size: 2.2rem;
@@ -355,17 +342,18 @@ header p {
 </head>
 <body>
 
-<nav class="navbar">
-   <div class="logo">
-    <img src="Screenshot 2026-02-28 103201.png" alt="DSCL Logo">
-    <span>DSCL | IIT Jodhpur</span>
-</div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="people.html" class="active">People</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-    </ul>
+<nav>
+    <div class="logo">
+        <img src="Screenshot 2026-02-28 103201.png" alt="DSCL Logo">
+        <span>DSCL | IIT Jodhpur</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
 </nav>
 <header>
     <section class="page-header">
@@ -509,6 +497,7 @@ interval = setInterval(autoSlide, 3000);
 
 </body>
 </html>
+
 
 
 
