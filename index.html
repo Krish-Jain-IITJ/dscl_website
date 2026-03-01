@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Screenshot 2026-02-28 103201.png">
     <meta charset="UTF-8">
-	<title>Research | Distributed Systems and Control Laboratory</title>
+    <title>Research | Distributed Systems and Control Laboratory</title>
     <link rel="stylesheet" href="people.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distributed Systems and Control Laboratory | IIT Jodhpur</title>
@@ -23,62 +22,41 @@
             color: #1a1a1a;
              background: linear-gradient(rgba(246, 244, 244, 0.941), rgba(197, 210, 219, 0.6));
         }
-		/* Make everything responsive */
-* {
-    box-sizing: border-box;
-}
 
-/* Prevent horizontal scroll */
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
-
-
-nav {
+      /* .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(12, 11, 11, 0.95);
+            width: 100%;
+            top: 0;
+            background: rgba(12, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            z-index: 1000;    /* keeps it above everything */
+/* }
+
+.navbar ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 4%;
-    z-index: 1000;
+    list-style: none;
+    gap: 30px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: clamp(0.7rem, 2vw, 1rem);
-    white-space: nowrap;
-}
-
-.logo img {
-    height: 24px;
-    width: auto;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: clamp(6px, 2vw, 18px);
-    flex-wrap: nowrap;
-}
-
-.nav-links a {
+.navbar a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: clamp(0.65rem, 1.8vw, 0.95rem);
-    white-space: nowrap;
+    color: white;
+    font-weight: 500;
 }
+
+.navbar a.active {
+    border-bottom: 2px solid white;
+} */ */
+
         /* HERO SECTION */
 	
         header {
+
     height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url("WhatsApp Image 2026-02-28 at 10.36.18.jpeg");
@@ -94,20 +72,28 @@ nav {
     text-align: center;
     padding: 0 20px;
 }
-header h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    max-width: 900px;
-}
 
-header p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 700px;
-    opacity: 0.9;
-    margin-bottom: 40px;
-}
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            max-width: 900px;white-space:nowrap;
+            margin-right: 115px;
+            
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 700px;
+            opacity: 0.9;
+			white-space:nowrap;
+			margin-bottom: 60px;
+            margin-left: 85px;
+
+	
+        }
+
         .hero-btn {
             margin-top: 60px;
             padding: 12px 28px;
@@ -245,8 +231,7 @@ header p {
     font-size: 1.1rem;
 }
 
-    
-} @media (max-width: 768px) {
+          @media (max-width: 768px) {
             header h1 {
                 font-size: 2.2rem;
             }
@@ -264,10 +249,6 @@ header p {
     font-size: 1.1rem;
 }
 
-.logo img {
-    height: 32px;   /* adjust size here */
-    width: auto;
-}
 .logo img {
     height: 32px;   /* adjust size here */
     width: auto;
@@ -338,19 +319,17 @@ header p {
     </style>
 </head>
 <body>
-
-<nav>
-    <div class="logo">
-        <img src="Screenshot 2026-02-28 103201.png" alt="DSCL Logo">
-        <span>DSCL | IIT Jodhpur</span>
-    </div>
-
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="people.html">People</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
+<nav class="navbar">
+   <div class="logo">
+    <img src="Screenshot 2026-02-28 103201.png" alt="DSCL Logo">
+    <span>DSCL | IIT Jodhpur</span>
+</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html" class="active">People</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
 </nav>
 <header>
     <section class="page-header">
@@ -491,13 +470,8 @@ function resetAutoSlide() {
 
 interval = setInterval(autoSlide, 3000);
 </script>
-
 </body>
 </html>
-
-
-
-
 
 
 
