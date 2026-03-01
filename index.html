@@ -234,24 +234,57 @@ header p {
     font-size: 1.1rem;
 }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
+      @media (max-width: 768px) {
 
-            section {
-                padding: 80px 6%;
-            }
-        }
-		.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    color: #f9fafa;
-    font-size: 1.1rem;
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 0;
+        display: block;
+    }
+}@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 0;
+        display: block;
+    }
 }
-
 .logo img {
     height: 32px;   /* adjust size here */
     width: auto;
@@ -477,5 +510,6 @@ interval = setInterval(autoSlide, 3000);
 
 </body>
 </html>
+
 
 
