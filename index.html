@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Screenshot 2026-02-28 103201.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,16 @@
             color: #1a1a1a;
              background: linear-gradient(rgba(246, 244, 244, 0.941), rgba(197, 210, 219, 0.6));
         }
+		/* Make everything responsive */
+* {
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
 
         /* NAVBAR */
         nav {
@@ -64,6 +75,24 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+		@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 8px 0;
+    }
+
+}
 
         /* HERO SECTION */
 	
@@ -84,28 +113,20 @@
     text-align: center;
     padding: 0 20px;
 }
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    max-width: 900px;
+}
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            max-width: 900px;white-space:nowrap;
-            margin-right: 115px;
-            
-        }
-
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            max-width: 700px;
-            opacity: 0.9;
-			white-space:nowrap;
-			margin-bottom: 60px;
-            margin-left: 85px;
-
-	
-        }
-
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 700px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
         .hero-btn {
             margin-top: 60px;
             padding: 12px 28px;
@@ -489,3 +510,4 @@ interval = setInterval(autoSlide, 3000);
 
 </body>
 </html>
+
