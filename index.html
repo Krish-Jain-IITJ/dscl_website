@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="Screenshot 2026-02-28 103201.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Systems and Control Laboratory | IIT Jodhpur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1;
+            color: #1a1a1a;
+             background: linear-gradient(rgba(246, 244, 244, 0.941), rgba(197, 210, 219, 0.6));
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(12, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            color: #002147;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #f9fafa;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -4px;
+            background: #f9fafa;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+	
+        header {
+
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("WhatsApp Image 2026-02-28 at 10.36.18.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            max-width: 900px;white-space:nowrap;
+            margin-right: 115px;
+            
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 700px;
+            opacity: 0.9;
+			white-space:nowrap;
+			margin-bottom: 60px;
+            margin-left: 85px;
+
+	
+        }
+
+        .hero-btn {
+            margin-top: 60px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            background: white;
+            color: #002147;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #e6ecff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 8%;
+        }
+.section-title {
+    text-align: center;
+	margin-bottom: 30px;
+}
+
+       .about p {
+    max-width: 1400px;
+    margin: 0;              /* remove auto centering */
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+        /* CARDS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #003366;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* CONTACT */
+       
+       .contact-box {
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 0;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    overflow: hidden;
+} 
+       .contact-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;   /* adjust this for lightness */
+    z-index: 0;
+} 
+.contact-box * {
+    position: relative;
+    z-index: 1;
+}
+
+        .contact-box p {
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 26px;
+            border-radius: 30px;
+            background: #002147;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #004080;
+        }
+
+        footer {
+    background: #040404;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 70px;
+    width: auto;
+    opacity: 0.9;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.institute-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+        }
+		.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: #f9fafa;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    height: 32px;   /* adjust size here */
+    width: auto;
+}
+
+
+/* ABOUT SLIDESHOW */
+#about {
+    padding-bottom: 40px;   /* reduce from 100px */
+}
+
+#research {
+    padding-top: 60px;      /* reduce from 100px */
+}
+#research {
+    padding-bottom: 60px;   /* was effectively 100px */
+}
+
+#contact {
+    padding-top: 60px;      /* was effectively 100px */
+}
+
+
+.about-slideshow {
+    position: relative;
+    max-width: 900px;
+    height: 450px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.slides-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+    </style>
+</head>
+<body>
+
+<nav>
+	
+ 
+	<div class="logo">
+    <img src="Screenshot 2026-02-28 103201.png" alt="DSCL Logo">
+    <span>DSCL | IIT Jodhpur</span>
+</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="#contact">Contact</a>
+        <a href="people.html">People</a>
+    </div>
+</nav>
+
+<header>
+    <div class="hero-content">
+        <h1>Distributed Systems and Control Laboratory</h1>
+        <p>Advancing Research in Autonomy, Distributed Control, and Secure Cyber-Physical Systems</p>
+        <a href="https://www.youtube.com/@DSCL_IITJ" target="_blank" class="hero-btn">Explore Channel</a>
+    </div>
+
+</header>
+
+<section id="about" class="about">
+    <h2 class="section-title">About the Laboratory</h2>
+    <p>
+       The Distributed Systems and Control Laboratory (DSCL) focuses on the analysis, design, and coordination of distributed and networked control systems. Our approach integrates systems and control theory with optimization, graph theory, and cybersecurity to address fundamental challenges in autonomous and interconnected systems. While our core strength lies in rigorous theoretical research, we actively translate these ideas into practical solutions through experimental validation and real-world cyber-physical platforms.
+
+DSCL is a research group within the Department of Electrical Engineering at IIT Jodhpur. Our team includes undergraduate students, graduate researchers, and collaborators from leading institutions across India and abroad. The laboratory provides an intellectually stimulating environment dedicated to advancing secure, scalable, and resilient control architectures for emerging technologies.
+
+We are always looking for highly motivated students and researchers to join our group. 
+    </p>
+	<div class="about-slideshow">
+    <div class="slides-track">
+        <img src="bg2.jpg" class="slide">
+        <img src="bg1.jpg" class="slide">
+        <img src="bg3.jpeg" class="slide">
+        <img src="bg7.jpg" class="slide">
+    </div>
+
+    <div class="dots"></div>
+</div>
+	
+</section>
+
+<section id="research">
+    <h2 class="section-title">Core Research Areas</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Cooperative Guidance and Control</h3>
+            <p>
+                Development of distributed control algorithms for autonomous vehicles and robotic
+                systems functioning in uncertain and dynamic environments.
+            </p>
+			
+        </div>
+
+        <div class="card">
+            <h3>Formation Control of Multi-Agent Systems</h3>
+            <p>
+                Coordination strategies enabling decentralized robotic networks to achieve
+                desired formations and collective behaviors.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Security in Cyber‑Physical Systems</h3>
+            <p>
+                Design of resilient control architectures and secure communication frameworks
+                to safeguard CPS against adversarial threats and information leakage.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Optimization and Control of Passive Systems</h3>
+            <p>
+                Energy‑aware distributed optimization and control techniques for systems
+                constrained by physical and structural limitations.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box">
+        <img src="Anoop-Jain-638812005299791184.jpg" alt="DSCL Logo">
+        <p><strong>Dr. Anoop Jain</strong></p>
+        <p>Assistant Professor</p>
+        <p>Department of Electrical Engineering</p>
+        <p>Indian Institute of Technology Jodhpur</p>
+        <p>Rajasthan 342030, India</p>
+        <a href="#" class="btn">Visit Our YouTube Channel</a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <img src="iitj_logo_new.png" alt="IIT Jodhpur Logo" class="footer-logo">
+
+        <div class="footer-text">
+            <p class="institute-name">Indian Institute of Technology Jodhpur</p>
+            <p>Rajasthan 342030</p>
+            <p>© 2026 Distributed Systems and Control Laboratory (DSCL)</p>
+        </div>
+    </div>
+</footer>
+<script>
+const track = document.querySelector(".slides-track");
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.querySelector(".dots");
+
+let index = 0;
+let interval;
+
+// Create dots dynamically
+slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+        index = i;
+        updateSlider();
+        resetAutoSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+function autoSlide() {
+    index = (index + 1) % slides.length;
+    updateSlider();
+}
+
+function resetAutoSlide() {
+    clearInterval(interval);
+    interval = setInterval(autoSlide, 3000);
+}
+
+interval = setInterval(autoSlide, 3000);
+</script>
+
+</body>
+</html>

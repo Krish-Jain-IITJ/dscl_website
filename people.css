@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f8fc;
+    color: #222;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: #f9fafa;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    height: 32px;   /* adjust size here */
+    width: auto;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(12, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            z-index: 1000;    /* keeps it above everything */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid white;
+}
+   .hero-btn {
+            margin-top: 60px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            background: white;
+            color: #002147;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #e6ecff;
+        }
+
+/* HEADER */
+.page-header {
+   height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("WhatsApp Image 2026-02-28 at 10.36.18.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* PROFESSOR */
+.professor-section {
+    padding: 80px 10%;
+}
+
+.professor-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.professor-card img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.professor-info h2 {
+    margin-bottom: 10px;
+}
+
+.designation {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* STUDENTS */
+.students-section {
+    padding: 80px 10%;
+}
+
+.students-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.student-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+}
+
+.student-card img {
+
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: top;   
+}
+
+/* ALUMNI */
+.alumni-section {
+    padding: 80px 10%;
+    text-align: left;
+}
+
+.alumni-section h2 {
+    margin-bottom: 30px;
+}
+
+.alumni-list p {
+    margin: 8px 0;
+}
+
+/* FOOTER */
+
+        footer {
+    background: #040404;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 70px;
+    width: auto;
+    opacity: 0.9;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.institute-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+        }
+		.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: #f9fafa;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    height: 32px;   /* adjust size here */
+    width: auto;
+}
